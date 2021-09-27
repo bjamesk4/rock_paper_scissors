@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //declare options for computer selection
+        const PLAYOPTIONS = ["rock", "paper", "scissors"];
+
+
+        function playRound() {
+            let computerSelection = computerPlay();
+
+            //Take input for players choice and make lowercase
+            let playerSelection = window.prompt("Choose Rock, Paper, or Scissors");
+            playerSelection = playerSelection.toLowerCase();
+
+            //Randomly chooses for computer from PLAYOPTIONS
+            function computerPlay() {
+                let random = Math.floor(Math.random() * PLAYOPTIONS.length);
+                return PLAYOPTIONS[random];
+            }
+
+            console.log(computerSelection);
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
