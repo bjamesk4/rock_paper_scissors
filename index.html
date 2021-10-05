@@ -5,112 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
-    <script>
-        //declare options for computer selection
-        const PLAY_OPTIONS = ["rock", "paper", "scissors"];
-
-        //create variable for player score
-        let playerScore = 0;
-
-        //create variable for computer score
-        let computerScore = 0;
-
-        //create variable for round number
-        let roundNumber = 0;
-
-        //Make random choice for computer from PLAY_OPTIONS
-        function computerPlay() {
-            let random = Math.floor(Math.random() * PLAY_OPTIONS.length);
-            return PLAY_OPTIONS[random];
-        }
-
-        //function to play a single round
-        function playRound(result) {
-
-            let computerSelection = computerPlay();
-
-            //Take input for players choice and make lowercase
-            let playerSelection = window.prompt("Choose Rock, Paper, or Scissors");
-            playerSelection = playerSelection.toLowerCase();
-
-            //Tie
-            if (playerSelection === computerSelection) {
-                roundNumber++;
-                return "It's a tie!";
-            }
-            //player rock beats scissors
-            else if (playerSelection == "rock" && computerSelection == "scissors") {
-                roundNumber++;
-                playerScore++;
-                return "Rock beats scissors! You win!";
-            }
-
-            //player scissors beats paper
-            else if (playerSelection == "scissors" && computerSelection == "paper") {
-                roundNumber++;
-                playerScore++;
-                return "Scissors beats Paper! You win!";
-            }
-            //player paper beats rock
-            else if (playerSelection == "paper" && computerSelection == "rock") {
-                roundNumber++;
-                playerScore++;
-                return "Paper beats Rock! You win!";
-            }
-            //computer rock beats scissors
-            else if (computerSelection == "rock" && playerSelection == "scissors") {
-                roundNumber++;
-                computerScore++;
-                return "Scissors lose to Rock! Try Again!";
-            }
-            //computer scissors beats paper
-            else if (computerSelection == "scissors" && playerSelection == "paper") {
-                roundNumber++;
-                computerScore++;
-                return "Paper loses to Scissors! Try Again!";
-            }
-            //computer paper beats rock
-            else if (computerSelection == "paper" && playerSelection == "rock") {
-                roundNumber++;
-                computerScore++;
-                return "Rock loses to Paper! Try Again!";
-            }
-
-            //incorrect input
-            else {
-                return "Incorrect input. Please enter: Rock, Paper, or scissors";
-            }
-
-        }
-
-        function game() {
-            //Reset round number and scores
-            playerScore = 0;
-            computerScore = 0;
-            roundNumber = 0;
-
-            let i = 0;
-
-            while (i < 5){
-
-            //play a round 5 times while showing a string of "Round # - Round Results - Score"
-            let roundResult = playRound();
-
-            console.log("Round " + roundNumber + " results: " + roundResult + " | Player: " + 
-                playerScore + " Computer: " + computerScore);
-            i++;
-            }
-
-        }
-
-
-
-    </script>
-=======
     <title>Rock Paper Scissors</title>
     <script src="rock_paper_scissors.js" defer></script>
     <link rel="stylesheet" href="rock_paper_scissors.css">
